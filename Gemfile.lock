@@ -1,8 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.9.0)
+      public_suffix (>= 2.0.2, < 8.0)
     asciidoctor (1.5.8)
     asciimath (1.0.8)
     camertron-eprun (1.1.1)
@@ -168,7 +168,7 @@ GEM
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     optout (0.0.2)
-    public_suffix (4.0.6)
+    public_suffix (7.0.5)
     racc (1.8.1)
     rake (12.3.3)
     rchardet (1.8.0)

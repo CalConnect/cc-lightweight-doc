@@ -164,7 +164,7 @@ GEM
       rake
     mini_portile2 (2.8.9)
     multipart-post (2.1.1)
-    nokogiri (1.19.1)
+    nokogiri (1.19.3)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     optout (0.0.2)

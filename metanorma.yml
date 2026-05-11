@@ -1,7 +1,10 @@
----
 metanorma:
+  source:
+    files:
+      - sources/cc-36010.adoc
+      - sources/iso-36010.adoc
   deploy:
-    email: "travis-ci@metanorma.org"
+    email: travis-ci@metanorma.org
 relaton:
   collection:
     name: Lightweight document -- Document metamodel

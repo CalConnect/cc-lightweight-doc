@@ -1,0 +1,151 @@
+<bibdata type="standard">
+  <fetched>2020-07-03</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Information and documentation</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Guidelines for bibliographic references and citations to information resources</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Information and documentation – Guidelines for bibliographic references and citations to information resources</title>
+  <title type="title-intro" format="text/plain" language="fr" script="Latn">Information et documentation</title>
+  <title type="title-main" format="text/plain" language="fr" script="Latn">Principes directeurs pour la rédaction des références bibliographiques et des citations des ressources d'information</title>
+  <title type="main" format="text/plain" language="fr" script="Latn">Information et documentation – Principes directeurs pour la rédaction des références bibliographiques et des citations des ressources d'information</title>
+  <uri type="src">https://www.iso.org/standard/43320.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:43320:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/04/33/43320.detail.rss</uri>
+  <docidentifier type="ISO">ISO 690 (all parts)</docidentifier>
+  <docnumber>690</docnumber>
+  <date type="published">
+    <on>2010</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>3</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>90</stage>
+    <substage>92</substage>
+  </status>
+  <copyright>
+    <from>2010</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 690-2:1997</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 690:1987</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/DIS 690</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <fetched>2020-07-03</fetched>
+      <title type="title-intro" format="text/plain" language="en" script="Latn">Information and documentation</title>
+      <title type="title-main" format="text/plain" language="en" script="Latn">Guidelines for bibliographic references and citations to information resources</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Information and documentation - Guidelines for bibliographic references and citations to information resources</title>
+      <title type="title-intro" format="text/plain" language="fr" script="Latn">Information et documentation</title>
+      <title type="title-main" format="text/plain" language="fr" script="Latn">Principes directeurs pour la rédaction des références bibliographiques et des citations des ressources d'information</title>
+      <title type="main" format="text/plain" language="fr" script="Latn">Information et documentation - Principes directeurs pour la rédaction des références bibliographiques et des citations des ressources d'information</title>
+      <uri type="src">https://www.iso.org/standard/43320.html</uri>
+      <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:43320:en</uri>
+      <uri type="rss">https://www.iso.org/contents/data/standard/04/33/43320.detail.rss</uri>
+      <docidentifier type="ISO">ISO 690:2010</docidentifier>
+      <docnumber>690</docnumber>
+      <date type="published">
+        <on>2010</on>
+      </date>
+      <contributor>
+        <role type="publisher"/>
+        <organization>
+          <name>International Organization for Standardization</name>
+          <abbreviation>ISO</abbreviation>
+          <uri>www.iso.org</uri>
+        </organization>
+      </contributor>
+      <edition>3</edition>
+      <language>en</language>
+      <language>fr</language>
+      <script>Latn</script>
+      <abstract format="text/plain" language="en" script="Latn">ISO 690:2010 gives guidelines for the preparation of bibliographic references. It also gives guidelines for the preparation of citations in Latin scripts in works that are not themselves primarily bibliographical. It is applicable to bibliographic references and citations to all kinds of information resources, including but not limited to monographs, serials, contributions, patents, cartographic materials, electronic information resources (including computer software and databases), music, recorded sound, prints, photographs, graphic and audiovisual works, and moving images. It is not applicable to machine‑parsable citations. It is also not applicable to legal citations, which have their own standards.ISO 690:2010 does not prescribe a particular style of reference or citation. The examples used in ISO 690:2010 are not prescriptive as to style and punctuation.Explanations and examples of bibliographic references are also given in ISO 690:2010 to illustrate how to apply the requirements for referencing or citing printed and electronic information resources. </abstract>
+      <abstract format="text/plain" language="fr" script="Latn">L'ISO 690:2010 donne des principes directeurs pour la rédaction des références bibliographiques. Elle donne également des principes directeurs pour la rédaction en caractères latins de citations destinées à figurer dans des ouvrages qui ne sont pas eux-mêmes de nature essentiellement bibliographique. Elle s'applique aux références bibliographiques et aux citations de ressources de tous types y compris, mais sans limitation, aux monographies, aux publications en série, aux contributions, aux brevets, aux documents cartographiques, aux ressources électroniques (y compris les logiciels et les bases de données), à la musique, au son enregistré, aux estampes, aux photographies, aux œuvres graphiques et audiovisuelles et aux images animées. Elle ne s'applique pas aux citations analysables par une machine. Elle ne s'applique pas aux citations réglementaires qui disposent de leurs propres normes.L'ISO 690:2010 ne donne aucune consigne de mise en forme des références ou des citations. Le style et la ponctuation utilisés dans les exemples donnés dans l'ISO 690:2010 n'ont pas de caractère normatif.Des explications et des exemples de références bibliographiques sont également donnés dans l'ISO 690:2010 afin d'illustrer l'application des exigences relatives à l'établissement des références et des citations de ressources imprimées et électroniques. </abstract>
+      <status>
+        <stage>90</stage>
+        <substage>92</substage>
+      </status>
+      <copyright>
+        <from>2010</from>
+        <owner>
+          <organization>
+            <name>ISO</name>
+          </organization>
+        </owner>
+      </copyright>
+      <relation type="obsoletes">
+        <bibitem type="standard">
+          <formattedref format="text/plain">ISO 690-2:1997</formattedref>
+        </bibitem>
+      </relation>
+      <relation type="obsoletes">
+        <bibitem type="standard">
+          <formattedref format="text/plain">ISO 690:1987</formattedref>
+        </bibitem>
+      </relation>
+      <relation type="obsoletes">
+        <bibitem type="standard">
+          <formattedref format="text/plain">ISO/DIS 690</formattedref>
+        </bibitem>
+      </relation>
+      <place>Geneva</place>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/DIS 690</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 690-2:1997</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 690:1987</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 690:1975</formattedref>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="46" type="TC">ISO/TC 46/SC 9Identification and description</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>01.140.20</code>
+      <text>Information sciences</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 690 (all parts)</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

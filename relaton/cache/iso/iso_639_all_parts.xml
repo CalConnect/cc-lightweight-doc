@@ -1,0 +1,151 @@
+<bibdata type="standard">
+  <fetched>2020-07-03</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Code for the representation of names of languages</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Code for the representation of names of languages</title>
+  <title type="title-main" format="text/plain" language="fr" script="Latn">Code pour la représentation des noms de langue</title>
+  <title type="main" format="text/plain" language="fr" script="Latn">Code pour la représentation des noms de langue</title>
+  <uri type="src">https://www.iso.org/standard/4766.html</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/00/47/4766.detail.rss</uri>
+  <docidentifier type="ISO">ISO 639 (all parts)</docidentifier>
+  <docnumber>639</docnumber>
+  <date type="published">
+    <on>1988</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>95</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>1988</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-1:2002</formattedref>
+      <date type="circulated">
+        <on>2002</on>
+      </date>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <fetched>2020-07-03</fetched>
+      <title type="title-main" format="text/plain" language="en" script="Latn">Code for the representation of names of languages</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Code for the representation of names of languages</title>
+      <title type="title-main" format="text/plain" language="fr" script="Latn">Code pour la représentation des noms de langue</title>
+      <title type="main" format="text/plain" language="fr" script="Latn">Code pour la représentation des noms de langue</title>
+      <uri type="src">https://www.iso.org/standard/4766.html</uri>
+      <uri type="rss">https://www.iso.org/contents/data/standard/00/47/4766.detail.rss</uri>
+      <docidentifier type="ISO">ISO 639:1988</docidentifier>
+      <docnumber>639</docnumber>
+      <date type="published">
+        <on>1988</on>
+      </date>
+      <contributor>
+        <role type="publisher"/>
+        <organization>
+          <name>International Organization for Standardization</name>
+          <abbreviation>ISO</abbreviation>
+          <uri>www.iso.org</uri>
+        </organization>
+      </contributor>
+      <edition>1</edition>
+      <language>en</language>
+      <language>fr</language>
+      <script>Latn</script>
+      <abstract format="text/plain" language="en" script="Latn">Gives a two-letter lower-case code. The symbols were devised primarily for use in terminology, lexicography and linguistic, but they may be used for any application. It also includes guidance on the use of language symbols in some of these applications. The annex includes a classified list of languages and their symbols arranged by families.</abstract>
+      <abstract format="text/plain" language="fr" script="Latn">Gives a two-letter lower-case code. The symbols were devised primarily for use in terminology, lexicography and linguistic, but they may be used for any application. It also includes guidance on the use of language symbols in some of these applications. The annex includes a classified list of languages and their symbols arranged by families.</abstract>
+      <status>
+        <stage>95</stage>
+        <substage>99</substage>
+      </status>
+      <copyright>
+        <from>1988</from>
+        <owner>
+          <organization>
+            <name>ISO</name>
+          </organization>
+        </owner>
+      </copyright>
+      <relation type="updates">
+        <bibitem type="standard">
+          <formattedref format="text/plain">ISO 639-1:2002</formattedref>
+          <date type="circulated">
+            <on>2002</on>
+          </date>
+        </bibitem>
+      </relation>
+      <place>Geneva</place>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-4:2010</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-5:2008</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-3:2007</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-1:2002</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-2:1998</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/CD 639-4</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 639-6:2009</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/R 639:1967</formattedref>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="37" type="TC">ISO/TC 37Language and terminology</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>01.140.20</code>
+      <text>Information sciences</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 639 (all parts)</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

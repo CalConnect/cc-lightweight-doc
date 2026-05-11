@@ -1,0 +1,32 @@
+<bibdata type="standard">
+  <fetched>2020-07-03</fetched>
+  <title format="text/plain" language="en" script="Latn">International Electrotechnical Vocabulary</title>
+  <docidentifier>IEC 60050:2011</docidentifier>
+  <date type="published">
+    <on>2011</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Electrotechnical Commission</name>
+      <abbreviation>IEC</abbreviation>
+      <uri>www.iec.ch</uri>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <language>fr</language>
+  <script>Latn</script>
+  <status>
+    <stage>60</stage>
+  </status>
+  <copyright>
+    <from>2018</from>
+    <owner>
+      <organization>
+        <name>International Electrotechnical Commission</name>
+        <abbreviation>IEC</abbreviation>
+        <uri>www.iec.ch</uri>
+      </organization>
+    </owner>
+  </copyright>
+</bibdata>

@@ -1,11 +1,9 @@
+---
 metanorma:
   source:
     files:
-      - sources/cc-36010.adoc
-      - sources/iso-36010.adoc
-  deploy:
-    email: travis-ci@metanorma.org
-relaton:
+    - sources/cc-36010.adoc
+    - sources/iso-36010.adoc
   collection:
     name: Lightweight document -- Document metamodel
     organization: CalConnect/ISO

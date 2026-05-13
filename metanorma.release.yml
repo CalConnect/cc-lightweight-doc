@@ -1,4 +1,5 @@
+# metanorma.release.yml — cc-lightweight-doc
+
 documents:
-  - source: sources/cc-36010.adoc
-  - source: sources/iso-36010.adoc
-    visibility: private
+  - pattern: "cc-*"
+    channels: [public/standards]

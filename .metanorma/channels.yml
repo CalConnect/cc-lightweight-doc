@@ -1,5 +1,0 @@
-# .metanorma/channels.yml — cc-lightweight-doc
-
-channels:
-  - name: public/standards
-    description: "CalConnect documents from cc-lightweight-doc"

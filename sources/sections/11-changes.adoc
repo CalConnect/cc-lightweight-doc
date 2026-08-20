@@ -8,7 +8,7 @@ applied incrementally towards a _BasicDocument_ in a defined manner.
 
 
 .Basic Document model: Changes
-image::basicdoc-models/images/Change.png[]
+image::basicdoc-models/images/Changes.png[]
 
 
 === Change

@@ -121,6 +121,10 @@ The Reference to ID Element class in turn has the following subclasses modelled:
 * Callout, for which the `type` is set to _callout_, and the `text` is constrained to be a single mandatory string. The target of the callout is understood to be the location of the callout within the source code; the extent of the target is not expressed overtly.
 * Reference To ID With Paragraph Element, which associates both `text` and `content` to the cross-reference; the `content` is a sequence of one or more paragraphs (<<basicpara>>).
 
+.Basic Document model: Reference Elements
+image::basicdoc-models/images/ReferenceElements.png[]
+
+
 [[footnote]]
 === Footnote
 

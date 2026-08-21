@@ -15,7 +15,13 @@ The following basic types are used in the definition of the _BasicDocument_ mode
 * Hash algorithms, as defined in <<iso10118>>.
 * Digital signature algorithms, as defined in <<iso14888>>.
 * Script names, as defined in <<iso15924>>.
-* Localized Strings, specifying a String with optional Language and Script attributes.
+* Localized Strings, specifying a String with optional language (<<iso639>>),
+  script (<<iso15924>>), and country (<<iso3166>>) attributes. A
+  language-script(-country) combination identifies a _spelling system_
+  as registered under <<iso24229>>, which also registers _system codes_
+  for written-language conversion systems (e.g. romanization and
+  transliteration schemes); a conversion system applied to content may
+  be identified through such a system code.
 * Formatted Strings, specifying a Localized String with a `format` attribute, in order to admit markup into Strings (whether XML-based or not).
 
 .Basic Document model: Data Types

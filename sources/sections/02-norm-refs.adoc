@@ -11,3 +11,4 @@
 * [[[iso14888,ISO/IEC 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
 * [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
 * [[[iso3166,ISO 3166 (all parts)]]], _Codes for the representation of names of countries and their subdivisions_
+* [[[iso24229,ISO 24229]]], _Information and documentation — Written-language conversion systems_

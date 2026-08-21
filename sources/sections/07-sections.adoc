@@ -17,6 +17,7 @@ All sections are modelled as having the following attributes:
 `id`:: an optional identifier for the section, to be used for cross-references within the document. (Citations of references are modelled as cross-references to the corresponding bibliographical item in the References section.)
 `language`:: zero or more language tags for the section, coded as <<iso639>> codes.
 `script`:: zero or more script tags for the section, coded as <<iso15924>> codes.
+The combination of language and script identifies a spelling system as registered under <<iso24229>>.
 `blocks`:: zero or more text blocks, containing the textual content of the section (but excluding subsections, which are only present in Hierarchical Sections). Notes are not given a separate attribute: a note is itself a block, modelled as an admonition of type _note_.
 
 

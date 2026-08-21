@@ -37,6 +37,8 @@ include::sections/01-scope.adoc[]
 
 include::sections/02-norm-refs.adoc[]
 
+include::sections/01a-conformance.adoc[]
+
 include::sections/03-terms.adoc[]
 
 include::sections/04-modelling.adoc[]

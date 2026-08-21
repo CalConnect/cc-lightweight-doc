@@ -23,8 +23,8 @@ the lowest common denominator in parsing support, which is
 plain text, with no defined human- or machine-understandable
 structure.
 
-The _BasicDocument_ model is created to express the structure of
-generic documents in a lightweight form.
+The _BasicDocument_ model (also known as _BasicDoc_ or _SecureDoc_) is
+created to express the structure of generic documents in a lightweight form.
 
 _BasicDocument_ achieves a number of goals:
 

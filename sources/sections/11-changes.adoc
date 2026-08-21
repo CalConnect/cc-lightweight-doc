@@ -19,7 +19,7 @@ It contains the following attributes:
 
 `target`::  The element that this action should be applied to.
 `identifier`::  A unique identifier of this change.
-`parentIdentifier`::  One or more unique identifiers of _Change_ objects, that this change is supposed to follow after.
+`parentIdentifier`::  zero or more unique identifiers of _Change_ objects, that this change is supposed to follow after; a change with no parent is a root of a change sequence.
 `contribMetadata`::  Metadata of the contributor, see <<contributionelementmetadata>>.
 
 
@@ -106,7 +106,6 @@ It has the following attribute:
 
 `actions`:: One or more `AttributeChangeAction` data
 
-// TODO: This seems to only handle a string, not changing attribute name or attribute value?!
 
 
 === Node change

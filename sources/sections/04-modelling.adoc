@@ -17,6 +17,45 @@ Specialization of a model consists of:
 * Changing attributes of a base model class. This is not restricted to adding attributes, as is the case in typical entity subclassing; it can also include removing attributes from a class, changing their obligation and cardinality, and changing their type, including changing enumerations. Attributes can be overruled at any level; for example, standards-specific models routinely enhance the bibliographic model at the base of the hierarchy.
 * For reasons of clarity, renaming classes and attributes is avoided in specialisation.
 
+=== Constructs, types, and specialization
+
+The _BasicDocument_ model provides generic _constructs_; markup languages and
+document models _specialize them as types_. The model does not enumerate a
+class per format feature: admonition kinds such as Note, Warning, Caution are
+values of the _AdmonitionType_ of a single _Admonition_ construct, and
+markup-specific kinds arrive through type values or subclassing. A foreign
+construct is covered by this model if it maps to an existing construct, a
+type-specialization of one, or register entries with relaxed or opaque
+content (see <<conformance>>).
+
+=== Attribute register
+
+Attributes form an open _register_: any construct (document, section, block,
+inline element) carries a set of key-value _Attribute_ entries, optionally
+qualified by a scheme. Markup languages bind their own attribute types as
+register entries; this model deliberately does not enumerate them. Keys with
+established cross-format meaning include `id`, `class`, `lang`, `script`,
+`unnumbered`, `subsequence`, and `format`.
+
+=== Composition
+
+A document is itself a block: entire documents may be attached as child
+content of any container whose content model accepts blocks. Content models
+of containers (list items, multi-paragraph blocks, definition-list
+definitions, table cells, examples) are accordingly _relaxed_: they contain
+zero or more blocks, not only paragraphs.
+
+=== Variables and raw content
+
+References to variables (attribute references in AsciiDoc, substitutions in
+RST, template variables) are modelled as a _ReferenceToVariable_ inline
+element resolving, at processing time, against the attribute register.
+Raw or passthrough content is non-markup content the model does not
+interpret: inline raw content is a _FormattedString_ (whose `format`
+attribute exists precisely to admit markup into strings), and block-level
+raw content is a string-carrying construct qualified by a `format` register
+entry.
+
 === Structure
 
 The classes involved in the document model are of three classes:

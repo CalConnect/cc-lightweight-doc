@@ -47,7 +47,8 @@ image::basicdoc-models/images/Paragraphs.png[]
 
 ==== General
 
-The following classes of block are modelled as containing zero or more paragraphs.
+The following classes of block are modelled as containers of zero or more
+blocks; the paragraphs of their name are the typical case.
 
 .Basic Document model: Multi-paragraph Block
 image::basicdoc-models/images/MultiParagraphs.png[]
@@ -64,7 +65,7 @@ _Blockquote_, which also contains an optional bibliographic citation for the quo
 
 _Admonition_, which captures sidebars to the main text conveying particular warnings or supplementary text to the reader. The Admonition block includes a `name` (title), a `class` (subcategory), a `uri` (in case the admonition is available as a separate external document), and a `type` of admonition. 
 
-The `type` of admonition determines the rendering of the admonition; the `class` allows different runs of admonitions to be labelled and auto-numbered differently, even if they are of the same type. The defined types for the _BasicDocument_ model are _Warning, Note, Tip, Important, Caution, and Statement_. (In rendering, distinct admonition types are often associated with distinct icons or rendering.)
+The `type` of admonition determines the rendering of the admonition; the `class` allows different runs of admonitions to be labelled and auto-numbered differently, even if they are of the same type. The types defined for the _BasicDocument_ model are _warning, note, tip, important,_ and _caution_ (in rendering, distinct admonition types are often associated with distinct icons or rendering). Further kinds, such as _statement_, _danger_, _error,_ or _hint,_ are provided by specializations of this model, not by this model itself.
 
 NOTE: Statement is intended for typographically separate statements in mathematics, such as propositions, proofs, or theorems. Statement conflates all of these for rendering, while Proposition, Proof, Theorem etc. can be treated as distinct classes.
 
@@ -74,7 +75,7 @@ NOTE: Admonition notes are modelled to be distinct from notes under sections or 
 [[review]]
 ==== Review
 
-_Review_, which is intended to capture reviewer comments about some text in the document. The Review block includes the following attributes: an optional string identifying the `reviewer` who offered the comment; an optional `date` when the comment was made; a mandatory identifier for the start of the text to which the comment applies (`appliesFrom`), and an optional identifier for the end of the text to which the comment applies (`appliesTo`).
+_Review_, which is intended to capture reviewer comments about some text in the document. The Review block includes the following attributes: an optional string identifying the `reviewer` who offered the comment; an optional `date` when the comment was made; an optional `type` of reviewer comment; an optional identifier for the start of the text to which the comment applies (`appliesFrom`), and an optional identifier for the end of the text to which the comment applies (`appliesTo`). If `appliesFrom` is absent, the comment applies in the vicinity of the place it has been inserted into the text.
 
 NOTE: If the `appliesTo` identifier of a Review block is absent, the comment applies only to the span of text identified by the `appliesFrom` identifier; if it is present, the comments applies to the span of text between the start of the span of text identified by `appliesFrom`, and the end of the span of text identified by `appliesTo`.
 
@@ -118,7 +119,7 @@ _Table rows_ are defined as a sequence of zero or more header cells and data cel
 
 ==== Table cells
 
-_Table cells_ contain either zero or more paragraphs with footnotes (<<basicpara>>), or zero or more text elements (<<textelements>>). In addition, they have the following optional rendering attributes, which are aligned with HTML:
+_Table cells_ contain either zero or more text elements (<<textelements>>), footnotes included, or zero or more blocks (<<basicblock>>) — the cell content model is relaxed, matching the container rule of <<conformance>>; markup that admits block content in cells (e.g. AsciiDoc `a|` cells) maps directly. In addition, they have the following optional rendering attributes, which are aligned with HTML:
 
 `colspan`:: Number of columns in the underlying table grid which the cell spans.
 
@@ -132,13 +133,13 @@ _Table cells_ contain either zero or more paragraphs with footnotes (<<basicpara
 [[basiclist]]
 === List
 
-Lists are modelled following the same principles as HTML lists. All lists contain zero or more _list items_, which by default consist of an identifier (`id`), and one or more paragraphs with footnotes (<<basicpara>>). This allows individual list items in a list to be cross-referenced within the document.
+Lists are modelled following the same principles as HTML lists. All lists contain zero or more _list items_, which consist of an optional identifier (`id`), and zero or more blocks (<<basicblock>>) — list item content is relaxed, so markup whose items contain arbitrary blocks (loose Markdown lists, AsciiDoc continuations, RST items) maps directly. The identifier allows individual list items to be cross-referenced within the document.
 
 Three subclasses of List are modelled.
 
 * _Unordered lists_ are equivalent to the List base class.
 
-* _Ordered lists_ are Lists with a `type` attribute, describing the kind of numeration applied to the List; the values allowed under the _BasicDocument_ model are _roman, alphabet, arabic, roman_upper, alphabet_upper_, corresponding to lowercase Roman numerals, lowercase alphabetic letters, Arabic numerals, uppercase Roman numerals, and uppercase alphabetic letters.
+* _Ordered lists_ are Lists with a `type` attribute, describing the kind of numeration applied to the List; the values allowed under the _BasicDocument_ model are _roman, alphabet, arabic, romanUpper, alphabetUpper_, corresponding to lowercase Roman numerals, lowercase alphabetic letters, Arabic numerals, uppercase Roman numerals, and uppercase alphabetic letters.
 
 * _Definition lists_ override the definition of the List Item to be a pair of `item` (zero or more text elements: <<textelements>>) and `definition` (zero or more paragraphs with footnotes: <<basicpara>>).
 
@@ -240,15 +241,7 @@ It contains the following elements (which are a subset of the elements of Source
 [[basicexample]]
 ==== Example
 
-Example blocks are wrappers for open-ended example text. They consist of a combination of any of the following blocks:
-
-* Formula
-* List
-* Blockquote (which is how generic text is included in an example)
-* Sourcecode
-* Paragraph
-
-It also contains the following elements:
+Example blocks are wrappers for open-ended example content: they contain zero or more blocks (<<basicblock>>), an extension point that higher layers may extend additively. They also contain:
 
 `unnumbered`:: An optional boolean attribute indicating that the example should be excluded from any automatic numbering of examples in the document.
 
@@ -256,3 +249,30 @@ It also contains the following elements:
 
 `name`:: A label for the example.
 
+
+
+[[amend]]
+=== Amend
+
+The _AmendBlock_ describes a change in a document for human readers, as
+opposed to the machine-readable _Change_ models (<<change-models>>).
+
+`change`:: the type of change described: one of _add, modify, delete, replace_ (_ChangeType_).
+`bibLocality`, `localityStack`:: the location in the original document which has undergone the change, as bibliographic localities (<<relaton>>).
+`path`, `pathEnd`:: the span within the location where the change applies, if the location defines a container larger than the scope of the change.
+`title`:: an optional caption of this block.
+`description`:: zero or more blocks describing the change.
+`newContent`:: a _NewContentBlock_ (see below).
+`classification`:: zero or more key-value classifications of the change, as attribute register entries.
+`contributor`:: zero or more contributors responsible for the change (<<relaton>>).
+`position`:: for an _add_ change, whether the change is added _before_ or _after_ the location.
+
+==== New content
+
+The _NewContentBlock_ is the composition container for amend content: it
+carries zero or more blocks (`newContentBlocks`), zero or more sections
+(`clause`), and zero or more entire documents (`document`) — a document is
+a block (see <<conformance>>), so whole documents compose as child content.
+
+.Basic Document model: Multi-paragraph and Amend Blocks
+image::basicdoc-models/images/MultiParagraphs.png[]

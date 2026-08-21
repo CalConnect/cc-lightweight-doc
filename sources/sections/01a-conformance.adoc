@@ -1,0 +1,22 @@
+[[conformance]]
+== Conformance
+
+The LutaML definition modules (`models/**/*.lml` in the model repository)
+are the definitive expression of this document model. The RelaxNG Compact
+grammars accompanying them are implementation grammars for validation;
+the diagrams reproduced in this document are informative.
+
+A serialization or implementation conforms to this model if it can
+represent every construct of the model without loss. This model is
+intended as a complete superset of lightweight markup languages
+(AsciiDoc, Markdown and its flavours, reStructuredText) and richer
+document formats: a construct of such a format is covered if it maps to:
+
+. an existing construct of this model;
+. a type-specialization of such a construct; or
+. entries in the attribute register, together with relaxed or opaque
+  (raw) content.
+
+The following are preprocessing or rendering concerns, and are out of
+scope: attribute conditionals, content inclusion, table-of-content
+generation, smart punctuation, and citation rendering modes.

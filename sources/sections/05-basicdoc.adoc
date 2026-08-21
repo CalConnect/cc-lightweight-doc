@@ -4,10 +4,7 @@
 
 The _BasicDocument_ model treats all documents as collections of _sections_ (<<basicsection>>). It also adds the following metadata as part of the document model:
 
-// Please confirm what I've assumed here for identifier
-// TODO: I'm surprised it's mandatory: that certainly is not the case for Metanorma!
-
-`identifier`:: a globally unique identifier for the document in an agreed identifier schema. The identifier is to be used for tracking interactions with the document without depending on formal document registries; it would be exemplified by a GUID, rather than a document registry identifier such as "`ISO 639`", which belongs to `bibdata`.
+`identifier`:: an optional globally unique identifier for the document in an agreed identifier schema. The identifier is to be used for tracking interactions with the document without depending on formal document registries; it would be exemplified by a GUID, rather than a document registry identifier such as "`ISO 639`", which belongs to `bibdata`.
 
 `bibdata`:: a bibliographic description, capturing bibliographic metadata about the document itself, including authors, title, and date of production.
 

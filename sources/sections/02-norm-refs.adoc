@@ -5,8 +5,9 @@
 * [[[relaton,ISO 6900:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
 * [[[rfc3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_
 * [[[iso639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
-* [[[iso8601-1,ISO 8601-1]]], _AUTOFILL_
-* [[[iso8601-2,ISO 8601-2]]], _AUTOFILL_
+* [[[iso8601-1,ISO 8601-1:2019]]], _Date and time — Representations for information interchange — Part 1: Basic rules_
+* [[[iso8601-2,ISO 8601-2:2019]]], _Date and time — Representations for information interchange — Part 2: Extensions_
 * [[[iso10118,ISO/IEC 10118 (all parts)]]], _Information technology -- Security techniques -- Hash-functions_
 * [[[iso14888,ISO/IEC 14888 (all parts)]]], _Information technology -- Security techniques -- Digital signatures with appendix_
 * [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+* [[[iso3166,ISO 3166 (all parts)]]], _Codes for the representation of names of countries and their subdivisions_

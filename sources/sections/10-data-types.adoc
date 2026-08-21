@@ -6,7 +6,10 @@
 The following basic types are used in the definition of the _BasicDocument_ model.
 
 * String
+* Attribute register entries: key-value pairs with an optional qualifying scheme (see <<conformance>>)
+* Image sizes: a real number with an optional percent sign, or "auto"
 * URI, as defined in <<rfc3986>>.
+* Country codes, as defined in <<iso3166>>.
 * Language names, as defined in <<iso639>>.
 * Dates and times, as defined in <<iso8601-1>>.
 * Hash algorithms, as defined in <<iso10118>>.
@@ -26,7 +29,12 @@ In addition to the Basic Data Values, the _BasicDocument_ model defines a contai
 
 `dateTime`:: The date and time when the contribution was made.
 `contributor`:: The party who made the contribution, as described through the `contributor` element in <<relaton>>.
-`inegrityValue`:: A digital signature of the contribution, consisting of a `hash` value and a `signature`, with an associated `publicKey`.
+`integrityValue`:: zero or more _IntegrityValue_ entries, digital signatures of the contribution.
+
+The _IntegrityValue_ class consists of a `hash` value and a `signature`,
+with an associated `publicKey`; hash algorithm identifiers follow
+<<iso10118>> and digital signature algorithm identifiers follow
+<<iso14888>>.
 
 .Basic Document model: Contribution Element Metadata
 image::basicdoc-models/images/ContribMetadata.png[]

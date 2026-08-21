@@ -37,13 +37,23 @@ The following elements indicate formatting, and have no further attributes:
 * Underline (corresponding to HTML 4 `u`)
 * Small Caps
 
-The following elements are used for Ruby annotations in East Asian languages, and correspond to their HTML 5 equivalents;
+The following elements are used for Ruby annotations in East Asian
+languages, and correspond to the HTML 5 `ruby`, `rt`, `rp` elements:
 
-* ruby
-* rt
-* rp
+* _RubyElement_ (the annotation base)
+* _RubyPronunciation_ (`rt`)
+* _RubyAnnotation_ (`rp`)
 
-Text Elements also include the STEM element, representing mathematical and other formulas. This consists of a `type`, indicating which language is used to express the formula, and the content of the formula itself. By default the _BasicDocument_ model allows AsciiMath and MathML in STEM elements.
+Text elements are distinguished from _Pure Text Elements_, which are
+restricted to contain only other pure text elements — no identifiers and no
+references — so that consumers that process plain runs of text can rely on
+the distinction.
+
+Text Elements also include the STEM element, representing mathematical and
+other formulas. This consists of a `stemType`, indicating which language is
+used to express the formula, and the content (`stemValue`) of the formula
+itself. The _BasicDocument_ model allows AsciiMath, MathML, and LaTeX in
+STEM elements.
 
 
 .Basic Document model: Text Elements
@@ -85,13 +95,13 @@ There are two subclasses of ID Elements in the _BasicDocument_ model:
 Media files are of three subtypes, each of which has its own element name:
 
 * _Image_ is for image files, and has the following additional attributes
-`height`:: optional attribute, which can be an integer or "auto"
-`width`:: optional attribute, which can be an integer or "auto"
+`height`:: optional attribute (<<datavalues>>): a real number with an optional percent sign, or "auto"
+`width`:: optional attribute (<<datavalues>>): a real number with an optional percent sign, or "auto"
 
 * _Audio_ is for audio files, and has the following additional attributes
 `altsource`:: zero or more specifications of alternative files to use as media. These specifications in turn consist of an optional `filename`, a `source`, and a `type`, as with the parent _Media_ class
 
-* _Video_ is for audio files, and has the following additional attributes
+* _Video_ is for video files, and has the following additional attributes
 `altsource`:: zero or more specifications of alternative files to use as media. These specifications in turn consist of an optional `filename`, a `source`, and a `type`, as with the parent _Media_ class
 `height`:: optional attribute, which can be an integer or "auto"
 `width`:: optional attribute, which can be an integer or "auto"
@@ -124,6 +134,14 @@ The Reference to ID Element class in turn has the following subclasses modelled:
 .Basic Document model: Reference Elements
 image::basicdoc-models/images/ReferenceElements.png[]
 
+
+==== Reference to Variable
+
+The _ReferenceToVariable_ element references a variable: it resolves, at
+processing time, to the value registered under its `name` in the attribute
+register (<<conformance>>). It is the model home for attribute references
+(AsciiDoc `{attr}`), substitutions (RST `|substitution|`), and template
+variables.
 
 [[footnote]]
 === Footnote

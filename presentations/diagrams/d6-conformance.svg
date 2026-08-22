@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="560" fill="#FFFAF2"/>
+  <text x="600" y="50" text-anchor="middle" fill="#2F6F82" font-size="15" letter-spacing="3">A STANDARD YOU CAN RUN</text>
+  <rect x="80" y="100" width="240" height="360" rx="8" fill="#0A1628"/>
+  <text x="200" y="270" text-anchor="middle" fill="#FFFAF2" font-size="21" font-weight="700">LML model sources</text>
+  <text x="200" y="298" text-anchor="middle" fill="#C5DDE4" font-size="14">the definitive expression</text>
+  <text x="200" y="320" text-anchor="middle" fill="#C5DDE4" font-size="14">(CC/ISO 36010 clause 4)</text>
+  <g font-size="15" text-anchor="middle" font-weight="600">
+    <rect x="440" y="104" width="300" height="70" rx="6" fill="#F3EBE0" stroke="#2F6F82" stroke-width="2"/><text x="590" y="135" fill="#0A1628">Model integrity gate</text><text x="590" y="158" fill="#243647" font-weight="400">names · types · visibility · definitions</text>
+    <rect x="440" y="196" width="300" height="70" rx="6" fill="#F3EBE0" stroke="#2F6F82" stroke-width="2"/><text x="590" y="227" fill="#0A1628">Diagram parity gate</text><text x="590" y="250" fill="#243647" font-weight="400">views = the model, provably</text>
+    <rect x="440" y="288" width="300" height="70" rx="6" fill="#F3EBE0" stroke="#B85A2A" stroke-width="2"/><text x="590" y="319" fill="#0A1628">XML instance suite</text><text x="590" y="342" fill="#243647" font-weight="400">validated against the grammar</text>
+    <rect x="440" y="380" width="300" height="70" rx="6" fill="#F3EBE0" stroke="#B85A2A" stroke-width="2"/><text x="590" y="411" fill="#0A1628">YAML instance suite</text><text x="590" y="434" fill="#243647" font-weight="400">validated against the parsed model</text>
+  </g>
+  <g stroke="#8A9AAB" stroke-width="2" fill="none">
+    <line x1="320" y1="140" x2="432" y2="139"/>
+    <line x1="320" y1="231" x2="432" y2="231"/>
+    <line x1="320" y1="323" x2="432" y2="323"/>
+    <line x1="320" y1="415" x2="432" y2="415"/>
+  </g>
+  <rect x="860" y="180" width="280" height="200" rx="8" fill="#2D6A4F"/>
+  <text x="1000" y="252" text-anchor="middle" fill="#FFFAF2" font-size="44" font-weight="700">GREEN</text>
+  <text x="1000" y="290" text-anchor="middle" fill="#D8F3DC" font-size="15">on every change, in CI —</text>
+  <text x="1000" y="312" text-anchor="middle" fill="#D8F3DC" font-size="15">grammar compilation and</text>
+  <text x="1000" y="334" text-anchor="middle" fill="#D8F3DC" font-size="15">regeneration parity included</text>
+  <g stroke="#2D6A4F" stroke-width="2" fill="none" marker-end="url(#g)">
+    <defs><marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2D6A4F"/></marker></defs>
+    <line x1="744" y1="280" x2="852" y2="280"/>
+  </g>
+  <text x="600" y="512" text-anchor="middle" fill="#0A1628" font-size="18" font-weight="700">A construct without a serializable instance is unfinished — enforced, not aspired to.</text>
+</svg>

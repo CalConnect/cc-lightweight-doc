@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+  <rect width="1200" height="700" fill="#FFFAF2"/>
+  <g font-size="16" text-anchor="start">
+    <rect x="120" y="40"  width="960" height="86" rx="6" fill="#F3EBE0" stroke="#D4C9B5"/>
+    <text x="150" y="76" fill="#0A1628" font-weight="700" font-size="19">Applications · CMSs · authoring tools · wikis</text>
+    <text x="150" y="104" fill="#243647">each with its own private idea of what a document is</text>
+
+    <rect x="120" y="146" width="960" height="86" rx="6" fill="#F3EBE0" stroke="#D4C9B5"/>
+    <text x="150" y="182" fill="#0A1628" font-weight="700" font-size="19">Publishing formats · HTML, RTF, DOCX, ODF, PDF</text>
+    <text x="150" y="210" fill="#243647">presentation-oriented: what documents look like</text>
+
+    <rect x="120" y="252" width="960" height="86" rx="6" fill="#F3EBE0" stroke="#D4C9B5"/>
+    <text x="150" y="288" fill="#0A1628" font-weight="700" font-size="19">Publishing DTDs · DocBook, TEI, DITA</text>
+    <text x="150" y="316" fill="#243647">rich but heavy — built for publishing pipelines, not interchange or tool interchange</text>
+
+    <rect x="120" y="358" width="960" height="86" rx="6" fill="#0A1628"/>
+    <text x="150" y="390" fill="#B85A2A" font-weight="700" font-size="15" letter-spacing="2.5">THE MISSING LAYER</text>
+    <text x="150" y="416" fill="#FFFAF2" font-weight="700" font-size="20">Lightweight document metamodel — what a document MEANS</text>
+    <text x="150" y="438" fill="#C5DDE4" font-size="15">harmonized · specializable · extensible · machine-checked · CC/ISO 36010</text>
+
+    <rect x="120" y="464" width="960" height="86" rx="6" fill="#F3EBE0" stroke="#D4C9B5"/>
+    <text x="150" y="500" fill="#0A1628" font-weight="700" font-size="19">Lightweight syntaxes · Markdown, AsciiDoc, RST</text>
+    <text x="150" y="528" fill="#243647">convenient to type — but no shared semantics between them</text>
+
+    <rect x="120" y="570" width="960" height="86" rx="6" fill="#F3EBE0" stroke="#D4C9B5"/>
+    <text x="150" y="606" fill="#0A1628" font-weight="700" font-size="19">Element standards · ISO 8601 time · ISO 639/15924/3166 language · ISO 690 references</text>
+    <text x="150" y="634" fill="#243647">the pieces are standardized — the document that carries them is not</text>
+  </g>
+  <path d="M 60 358 L 60 60 L 104 60 M 60 358 L 60 613 L 104 613" stroke="#B85A2A" stroke-width="0" fill="none"/>
+</svg>

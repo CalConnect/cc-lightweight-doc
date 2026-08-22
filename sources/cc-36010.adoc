@@ -62,5 +62,7 @@ include::sections/ab-specialization.adoc[]
 
 include::sections/ac-extensions.adoc[]
 
+include::sections/ad-abstract-test-suite.adoc[]
+
 include::sections/99-bibliography.adoc[]
 

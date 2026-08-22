@@ -1,0 +1,42 @@
+[[annex-d]]
+[appendix,obligation=normative]
+== Abstract test suite
+
+=== General
+
+This annex defines the abstract test suite for the conformance classes
+of this document. The test suite is executable: it runs as part of the
+continuous integration of the model repository, and the reference
+instance documents it consumes are maintained alongside the model.
+
+=== Conformance classes
+
+[cols="25%,45%,30%",options="header"]
+|===
+| Class | Requirement | Test
+
+| Model integrity | The LML definition modules parse, names resolve, every attribute carries an explicit visibility marker and a definition | Model lint gate
+| Diagram parity | Every diagram view includes its models and declares associations within its include closure; no class bodies under views | Parity gate
+| XML serialization | Every construct has a serializable XML form accepted by the accompanying grammar | XML instance suite against the compiled grammar
+| YAML serialization | Every construct has a serializable YAML form conforming to the model, inheritance included | YAML instance suite against the parsed model
+|===
+
+=== Test material
+
+The reference instances are twin documents — one XML, one YAML —
+exercising the attribute register (document, section, block, and inline
+levels; single and repeated values), relaxed content models (blocks
+within list items, admonition, quotation, definition-list definitions,
+table cells, examples), multi-row table headers, variable references,
+citations with a references section and bibliographic item, ruby
+annotations, source code callouts and annotations, reviewer comments,
+anchors and cross-references, and amend composition of blocks,
+sections, and entire documents. A construct without a serializable
+instance in the suite is treated as unfinished.
+
+=== Verdicts
+
+A processor or serialization passes a test if the instance validates
+against the grammar (XML) or the parsed model (YAML) without error.
+The gates abort on first failure; the test suite is regenerated from
+the model sources on every change.

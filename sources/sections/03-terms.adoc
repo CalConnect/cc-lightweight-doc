@@ -40,6 +40,22 @@ grouping of text that can be contained within a _paragraph_ (<<term_paragraph>>)
 
 hierarchical subdivision of a document, consisting of one or more _blocks_ (<<term_block>>), and/or one or more sections
 
+=== construct
+
+generic model element provided by this document (a class, an enumeration, or a data type) which markup languages and document models specialize as types or subclasses
+
+=== attribute register
+
+open set of key-value entries, optionally qualified by a scheme, attachable to any construct, into which markup languages bind their own attribute types
+
+=== spelling system
+
+combination of language (ISO 639), script (ISO 15924), and optionally country (ISO 3166) identifying a written-language variant, as registered under <<iso24229>>
+
+=== composition
+
+attachment of an entire document, as a block, as child content of any container whose content model accepts blocks
+
 === identifier
 
 character, or group of characters, used to identify or name an item of data and possibly to indicate certain properties of that item

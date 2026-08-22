@@ -1,9 +1,0 @@
-name: EmptyElements
-title: Empty Elements rule class
-caption: Empty Elements rule class data model
-directive: empty-elements
-imports:
-  BasicElement:
-  PageBreakElement:
-  LineBreakElement:
-  HorizontalRuleElement:

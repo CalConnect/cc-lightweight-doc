@@ -1,9 +1,0 @@
-name: Paragraphs
-title: Paragraphs rule class
-caption: Paragraphs rule class data model
-directive: paragraphs
-imports:
-  BasicBlock:
-  ParagraphBlock:
-  ParagraphsBlock:
-  ParagraphWithFootnote:

@@ -1,8 +1,0 @@
-name: Uri
-modelType: class
-definition: |
-
-attributes:
-  type:
-    definition: 
-    type: primitiveType

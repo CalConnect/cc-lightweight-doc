@@ -1,8 +1,0 @@
-name: Citation
-modelType: class
-definition: |
-
-attributes:
-  type:
-    definition: 
-    type: Bibliography

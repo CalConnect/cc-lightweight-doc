@@ -1,8 +1,0 @@
-name: BibData
-title: Bib Data rule class
-caption: Bib Data rule class data model
-directive: bib-data
-imports:
-  BibliographicItem:
-  BibData:
-  BibDataExtensionType:

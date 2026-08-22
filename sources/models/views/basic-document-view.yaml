@@ -1,6 +1,0 @@
-name: BasicDocument
-title: Basic Document rule class
-caption: Basic Document rule class data model
-directive: basic-document
-imports:
-  BasicDocument:

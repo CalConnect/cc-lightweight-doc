@@ -19,6 +19,7 @@ instance documents it consumes are maintained alongside the model.
 | Diagram parity | Every diagram view includes its models and declares associations within its include closure; no class bodies under views | Parity gate
 | XML serialization | Every construct has a serializable XML form accepted by the accompanying grammar | XML instance suite against the compiled grammar
 | YAML serialization | Every construct has a serializable YAML form conforming to the model, inheritance included | YAML instance suite against the parsed model
+| Profile conformance | A profile narrows only: names exist, cardinalities never widen, enumerations are subsets; profile instances contain no excluded construct and use permitted register keys only | Profile suite against the model and worked instances
 |===
 
 === Test material

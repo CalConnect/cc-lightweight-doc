@@ -1,8 +1,0 @@
-name: Iso15924Code
-modelType: class
-definition: |
-
-attributes:
-  type:
-    definition: 
-    type: dataType

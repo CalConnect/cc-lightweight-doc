@@ -1,9 +1,0 @@
-name: Sections
-title: Sections rule class
-caption: Sections rule class data model
-directive: sections
-imports:
-  BasicSection:
-  HierarchicalSection:
-  ContentSection:
-  ReferencesSection:

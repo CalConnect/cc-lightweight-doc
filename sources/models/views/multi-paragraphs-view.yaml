@@ -1,9 +1,0 @@
-name: MultiParagraphs
-title: Multi Paragraphs rule class
-caption: Multi Paragraphs rule class data model
-directive: multi-paragraphs
-imports:
-  ParagraphsBlock:
-  QuoteBlock:
-  ReviewBlock:
-  AdmonitionBlock:

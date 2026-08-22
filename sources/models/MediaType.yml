@@ -1,9 +1,0 @@
-# MIME types recommended
-name: MediaType
-modelType: class
-definition: |
-
-attributes:
-  content:
-    definition: 
-    type: String

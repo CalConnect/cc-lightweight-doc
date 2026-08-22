@@ -1,9 +1,0 @@
-# Hash algorithm
-name: Iso10118Oid
-modelType: class
-definition: |
-
-attributes:
-  type:
-    definition: 
-    type: dataType

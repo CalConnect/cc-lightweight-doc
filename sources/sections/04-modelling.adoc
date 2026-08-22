@@ -28,6 +28,32 @@ construct is covered by this model if it maps to an existing construct, a
 type-specialization of one, or register entries with relaxed or opaque
 content (see <<conformance>>).
 
+=== Tailoring and extension
+
+Users adapt this model through three layers, none of which modifies
+the basis (open-closed):
+
+* *Extension of instances* — the attribute register, format-qualified
+  raw content, and variable references carry dialect-specific
+  information losslessly, with no tooling beyond the base model.
+* *Extension of the model* — a specialization module defines new
+  classes under the construct roots, extends enumerations, and narrows
+  inherited attributes, as described above; it is a layer above this
+  model, never a change to it.
+* *Tailoring* — a _profile_ declares a subset of this model: the
+  constructs it excludes, the cardinalities it narrows, the
+  enumeration values it admits, and the closed vocabulary of register
+  keys it permits.
+
+A profile shall only narrow the base: it shall not widen any
+cardinality, admit enumeration values outside the base, add
+constructs, or rename them. Extensions live above a profile, as
+specialization modules. Profiles are expressed as declarative
+artifacts alongside the model, and are validated mechanically with
+the model repository's test suite (see <<annex-d>>); an instance that
+conforms to a profile is always a conforming instance of the base
+model.
+
 === Attribute register
 
 Attributes form an open _register_: any construct (document, section, block,

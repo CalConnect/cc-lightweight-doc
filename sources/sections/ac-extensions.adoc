@@ -1,0 +1,37 @@
+[[annex-c]]
+[appendix,obligation=informative]
+== Accommodating extensions
+
+=== The attribute register
+
+Extensions that would otherwise require model changes are carried as
+entries in the open attribute register (see <<conformance>>): any
+construct accepts `Attribute` entries (key, value(s), optional
+scheme). Well-known keys used across the ecosystem are `id`, `class`,
+`lang`, `script`, `unnumbered`, `subsequence`, and `format`; a markup
+dialect binds its own keys (for example, `checkbox` for task-list
+items, `option` for option-list entries) without any change to this
+model. A scheme qualifies interpretation — including ISO 24229 system
+codes identifying the romanization or transliteration scheme applied
+to content.
+
+=== Opaque and raw content
+
+Raw or passthrough content is non-markup: inline raw content is a
+`FormattedString` whose `format` attribute exists precisely to admit
+markup into strings; block-level raw content is a string-carrying
+construct (`LiteralBlock`, `SourcecodeBlock`) qualified by a `format`
+register entry. Unknown directives — including the entire Sphinx
+directive ecosystem — decompose into register entries (the directive
+name and its options) over any relaxed container, preserving both the
+content and the extension identity losslessly.
+
+=== Variables and composition
+
+Variable references (`ReferenceToVariable`) resolve against the
+register at processing time, covering AsciiDoc attribute references,
+reStructuredText substitutions, and template variables. Because a
+document is itself a block (see <<conformance>>), entire documents
+compose as child content of any relaxed container, supporting
+document-level inclusion as a structural relation rather than a
+preprocessing step.

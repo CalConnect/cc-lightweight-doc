@@ -57,5 +57,11 @@ include::sections/10-data-types.adoc[]
 
 include::sections/11-changes.adoc[]
 
+include::sections/aa-markup-mapping.adoc[]
+
+include::sections/ab-specialization.adoc[]
+
+include::sections/ac-extensions.adoc[]
+
 include::sections/99-bibliography.adoc[]
 

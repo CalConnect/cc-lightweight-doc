@@ -23,24 +23,24 @@ punctuation, and citation rendering modes.
 | AsciiDoc construct | Model home | Notes
 
 | Document header (title, author, revision) | `BasicDocument` `bibdata` + register | Document attributes become register entries
-| `=`–`======` section titles | `BasicSection` hierarchy | `[[id]]`, roles via register keys
+| section titles | `BasicSection` hierarchy | anchor identifiers and roles via register keys
 | Paragraph | `ParagraphBlock` | `align` option maps to `alignment`
-| `[quote]` | `QuoteBlock` | attribution/source
-| `NOTE:`, `TIP:`, `IMPORTANT:`, `WARNING:`, `CAUTION:` | `AdmonitionBlock` + `AdmonitionType` | further kinds (e.g. sidebar labels) as type-specializations
-| `====` example | `ExampleBlock` | relaxed block content
-| `-` / `*` / `.` lists | `UnorderedList`, `OrderedList` | continuations map to relaxed `ListItem` content
+| quote blocks | `QuoteBlock` | attribution/source
+| admonition paragraphs and blocks | `AdmonitionBlock` + `AdmonitionType` | further kinds (e.g. sidebar labels) as type-specializations
+| example blocks | `ExampleBlock` | relaxed block content
+| bullet, ordered, and definition lists | `UnorderedList`, `OrderedList` | continuations map to relaxed `ListItem` content
 | definition list | `DefinitionList` |
-| `|` table | `TableBlock` | `a|` cells map to relaxed cell content
-| `image::`/`image:` | `FigureBlock` / inline `Image` | `link`/roles via register
+| pipe table | `TableBlock` | auto-prefixed cells map to relaxed cell content
+| image block and inline macros | `FigureBlock` / inline `Image` | link target and roles via register
 | `source` block | `SourcecodeBlock` | callouts and annotations map directly
-| `stem:` | `StemElement` (`AsciiML` or `MathML`) |
+| stem macro | `StemElement` (`AsciiML` or `MathML`) |
 | `literal` / `[verse]` | `LiteralBlock` | verse: `format` register key over preformatted text
-| `pass:[]`, `+++` | `FormattedString` / `LiteralBlock` + `format` | raw content is non-markup
-| `{attr}` reference | `ReferenceToVariable` | resolves against the register
-| `xref:`, `<<>>`, anchors | `ReferenceToIdElement`, `Bookmark` |
-| `footnote:[]` | `Footnote` |
+| passthroughs (pass macro, triple-plus) | `FormattedString` / `LiteralBlock` + `format` | raw content is non-markup
+| attribute references | `ReferenceToVariable` | resolves against the register
+| cross-reference macros, anchors | `ReferenceToIdElement`, `Bookmark` |
+| footnote macro | `Footnote` |
 | bibliography section | `ReferencesSection` + `BibliographicItem` |
-| `include::`, `toc:[]`, `ifdef{}` | — | preprocessing, out of scope
+| include, ToC, and conditional directives | — | preprocessing, out of scope
 |===
 
 === Markdown (CommonMark, GFM, Pandoc)
@@ -49,20 +49,20 @@ punctuation, and citation rendering modes.
 |===
 | Markdown construct | Model home | Notes
 
-| ATX/setext headings | `BasicSection` | `{#id .class}` via register
+| ATX/setext headings | `BasicSection` | heading identifiers and classes via register
 | emphasis/strong/strikethrough | `EmphasisElement`, `StrongElement`, `StrikeElement` |
-| code span / fenced code | `MonospaceElement` / `SourcecodeBlock` | `:number-lines:` via register
+| code span / fenced code | `MonospaceElement` / `SourcecodeBlock` | number-lines option via register
 | bullet/ordered lists | `UnorderedList`, `OrderedList` | loose items map to relaxed `ListItem` content
-| task list `- [x]` | `ListItem` + register | `checkbox`/`completed` as register keys
+| task lists | `ListItem` + register | `checkbox`/`completed` as register keys
 | GFM table | `TableBlock` | column alignment denormalized to cell `align`
 | links / autolinks | `ReferenceToLinkElement` |
 | images (inline) | `Image` |
 | footnotes (Pandoc/GFM) | `Footnote` |
-| `==mark==` | text element specialization | emphasis-family kind
+| highlight marks | text element specialization | emphasis-family kind
 | `~sub~` `^sup^` | `SubscriptElement`, `SuperscriptElement` |
-| `$…$` math | `StemElement` (`LaTeX`) |
-| `[@cite]` | `Citation` + `BibliographicItem` |
-| `::: {.class}` fenced div | any relaxed container + register `class` |
+| inline math | `StemElement` (`LaTeX`) |
+| citations | `Citation` + `BibliographicItem` |
+| fenced divs | any relaxed container + register `class` |
 | raw HTML/TeX | `FormattedString` / `LiteralBlock` + `format` |
 | YAML front matter | document register | `BibDataExtensionType` for bibliographic keys
 |===
@@ -74,7 +74,7 @@ punctuation, and citation rendering modes.
 | RST construct | Model home | Notes
 
 | section titles / transitions | `BasicSection` / `HorizontalRuleElement` |
-| bullet/enumerated lists | `UnorderedList`, `OrderedList` | `#.` auto-numbering via `start`
+| bullet/enumerated lists | `UnorderedList`, `OrderedList` | auto-numbering via `start`
 | definition list | `DefinitionList` |
 | field list | document/block register | bibliographic keys to `BibDataExtensionType`
 | option list | `DefinitionList` + register `option` |
@@ -82,11 +82,11 @@ punctuation, and citation rendering modes.
 | block quote | `QuoteBlock` |
 | doctest block | `SourcecodeBlock` (`lang` = doctest) |
 | admonitions (note, warning, …) | `AdmonitionBlock` + `AdmonitionType` | `danger`, `error`, `hint` as type-specializations
-| `.. code::` | `SourcecodeBlock` | `:number-lines:` via register
-| `.. math::` | `StemElement` |
-| `::image:` / `::figure:` | `Image` / `FigureBlock` | `:target:` via register
-| `|substitution|` | `ReferenceToVariable` |
-| interpreted text roles | text element specializations | `:title-reference:` etc. as kinds
+| code directive | `SourcecodeBlock` | number-lines option via register
+| math directive | `StemElement` |
+| image and figure directives | `Image` / `FigureBlock` | target option via register
+| substitution references | `ReferenceToVariable` |
+| interpreted text roles | text element specializations | title-reference and similar roles as kinds
 | directives (incl. Sphinx) | register + relaxed content | directive name and options as register entries over any container
 | comments | — | dropped; noted as non-content
 |===

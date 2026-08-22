@@ -17,6 +17,11 @@ document formats: a construct of such a format is covered if it maps to:
 . entries in the attribute register, together with relaxed or opaque
   (raw) content.
 
+The coverage of the principal lightweight text markup languages is
+demonstrated construct by construct in <<annex-a>>. Specialization of
+constructs is described in <<annex-b>>; extension without model change
+(register entries, opaque content, variables) in <<annex-c>>.
+
 The following are preprocessing or rendering concerns, and are out of
 scope: attribute conditionals, content inclusion, table-of-content
 generation, smart punctuation, and citation rendering modes.

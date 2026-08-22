@@ -1,0 +1,32 @@
+[[annex-b]]
+[appendix,obligation=informative]
+== Accommodating specializations
+
+=== Type specialization
+
+Markup-specific kinds arrive as _type values_ of a single construct,
+never as parallel classes. `AdmonitionType` defines the five generic
+kinds (_warning_, _note_, _tip_, _important_, _caution_); reStructuredText's
+_danger_, _error_, and _hint_, and domain-specific labels, are added by
+specializations of this model extending the enumeration. The same
+pattern governs `OrderedListType`, `StemType`, and `DocumentType`
+(whose generic instance carries the single value _document_).
+
+=== Attribute specialization
+
+The specialization rules of <<conformance>> permit subclasses to add,
+remove, retighten, or retype inherited attributes. A Standards-document
+specialization proscribes "hanging paragraphs" by constraining the
+co-occurrence of text blocks and subsections; a typography-conscious
+specialization may narrow `LocalizedString` usage to spelling systems
+registered under <<iso24229>>.
+
+=== Class specialization
+
+New classes subclass existing roots: block families under
+`BasicBlock`, inline elements under `BasicElement`, reference kinds
+under `ReferenceElement`. The distinction between `TextElement` and
+`PureTextElement` illustrates specialization by constraint: pure text
+elements recurse only to pure text elements, so consumers processing
+plain runs of text can rely on the distinction without inspecting the
+full hierarchy.

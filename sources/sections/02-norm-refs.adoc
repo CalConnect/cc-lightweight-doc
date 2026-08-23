@@ -2,7 +2,8 @@
 [bibliography]
 == Normative references
 
-* [[[relaton,CC/ISO 6900:--]]] footnote:[In draft], _Information and documentation -- Bibliographic reference model and serialization_
+* [[[relaton,CC 6900]]], _Information and documentation -- Bibliographic reference model and serialization_
+* [[[iso19757-2,ISO/IEC 19757-2]]], _Information technology -- Document Schema Definition Languages (DSDL) -- Part 2: Regular-grammar-based validation -- RELAX NG_
 * [[[rfc3986,IETF RFC 3986]]], _Uniform Resource Identifier (URI): Generic Syntax_
 * [[[iso639,ISO 639 (all parts)]]], _Codes for the representation of names of languages_
 * [[[iso8601-1,ISO 8601-1:2019]]], _Date and time — Representations for information interchange — Part 1: Basic rules_

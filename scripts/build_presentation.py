@@ -76,7 +76,7 @@ def diagram(s, png, top=1.7, height=5.0):
 
 def pageno(s, n):
     text(s, 0.9, 7.05, 11.5, 0.35,
-         f"CalConnect → ISO/TC 154 · CC/ISO 36010 · {n}",
+         f"CalConnect → ISO/TC 154 fast-track · CC 36010 / ISO 36010 (DIS) · {n}",
          size=10, color=MIST)
 
 
@@ -87,7 +87,7 @@ text(s, 0.9, 1.35, 11.5, 0.5, "PROPOSAL FOR A DRAFT INTERNATIONAL STANDARD", siz
 text(s, 0.9, 1.95, 11.5, 2.1, "Lightweight document —\nDocument metamodel", size=52, color=PAPER, bold=True)
 text(s, 0.9, 4.25, 11.5, 0.7, "The missing interoperability layer for structured text", size=24, color=ICE)
 text(s, 0.9, 5.5, 11.5, 1.2,
-     "Proposed by CalConnect (TC VCARD)\nBase text CC/ISO 36010 · proof: 6+ years in production · every claim machine-checked",
+     "Proposed by CalConnect (TC VCARD)\nPublish as CC 36010, then fast-track to ISO/TC 154 as DIS · every claim machine-checked",
      size=15, color=MIST, leading=8)
 
 # ---- 2 · The everyday problem (D1) ----
@@ -203,7 +203,7 @@ pageno(s, 11)
 s = slide(INK)
 band(s, COPPER, 0.2)
 text(s, 0.9, 1.15, 11.5, 0.5, "THE ASK", size=16, color=CYAN, mono=True)
-text(s, 0.9, 1.7, 11.5, 1.5, "Adopt CC/ISO 36010 as the base text\nfor a Draft International Standard",
+text(s, 0.9, 1.7, 11.5, 1.5, "Publish CC 36010 at CalConnect,\nthen fast-track to ISO/TC 154 as a DIS",
      size=38, color=PAPER, bold=True)
 asks = [
     "Recognize the lightweight document metamodel as the interchange layer for structured text",
@@ -216,7 +216,7 @@ for a in asks:
     text(s, 1.1, y, 11.0, 0.62, "→  " + a, size=16, color=ICE)
     y += 0.74
 text(s, 0.9, 6.75, 11.5, 0.4,
-     "metanorma.github.io/basicdoc-models · github.com/metanorma/basicdoc-models · CC/ISO 36010",
+     "metanorma.github.io/basicdoc-models · github.com/metanorma/basicdoc-models · CC 36010 / ISO 36010 (DIS)",
      size=12, color=MIST, mono=True)
 
 out = HERE / "presentations" / "lightweight-doc-tc154-dis-proposal.pptx"

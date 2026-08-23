@@ -7,7 +7,7 @@ The _BasicDocument_ model is generic in its application, and accordingly does no
 
 * _Hierarchical Sections_, which can contain other sections. Hierarchical Sections are modelled as a subclass of Basic Sections, so the hierarchical arrangement of sections can be arbitrarily deep.
 
-* _Content Sections_, which in the _BasicDocument_ model are treated as equivalent to Hierarchical Sections. (The distinction is currently reserved for downstream models such as Metanorma, which differentiates structurally between prefatory sections and sections in the main body of the text; differences between the two may be introduced in the Basic Document model at a later date.)
+* _Content Sections_, which in the _BasicDocument_ model are treated as equivalent to Hierarchical Sections. (The distinction is currently reserved for downstream document models, which may differentiate structurally between prefatory sections and sections in the main body of the text; differences between the two may be introduced in the Basic Document model at a later date.)
 
 * _References Sections_, which are leaf nodes, and contain zero or more bibliographical items (as described in <<relaton>>), along with any prefatory text.
 
@@ -21,7 +21,6 @@ The combination of language and script identifies a spelling system as registere
 `blocks`:: zero or more text blocks, containing the textual content of the section (but excluding subsections, which are only present in Hierarchical Sections). Notes are not given a separate attribute: a note is itself a block, modelled as an admonition of type _note_.
 
 
-//(notably for Metanorma the ISO document model)
 NOTE: In the _BasicDocument_ model, a section can contain both blocks of text and subsections; in rendering, the blocks of text are presumed to come before the subsections. In some classes of document
 the co-occurrence of text and subsections in a clause (or in a section) is proscribed as "`hanging paragraphs`": in order for text to be clearly identifiable by section number, those models prevent text and subsections from being siblings. That proscription is modelled as an override of this model specific to Standards documents.
 

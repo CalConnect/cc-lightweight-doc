@@ -30,3 +30,18 @@ under `ReferenceElement`. The distinction between `TextElement` and
 elements recurse only to pure text elements, so consumers processing
 plain runs of text can rely on the distinction without inspecting the
 full hierarchy.
+
+
+=== Relationship to publishing document models
+
+Publishing document models such as DocBook and DITA solve a related
+problem with a different centre of gravity: they are rich, XML-based
+vocabularies for publishing pipelines, and DITA in particular
+pioneered the specialization mechanism this model adopts in lighter
+form. This model is not a replacement for them: it is the interchange
+core _below_ syntax — a deliberately small set of constructs into
+which lightweight markups parse losslessly and from which publishing
+vocabularies can be derived. Content reuse mechanisms such as DITA's
+content references are preprocessing in those frameworks; in this
+model, inclusion is structural (documents compose as blocks, see
+<<annex-c>>), requiring no preprocessing stage.

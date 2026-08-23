@@ -35,3 +35,19 @@ document is itself a block (see <<conformance>>), entire documents
 compose as child content of any relaxed container, supporting
 document-level inclusion as a structural relation rather than a
 preprocessing step.
+
+
+=== When a markup dialect gains a construct
+
+A flavour of Markdown introduces a new inline construct — say, a
+mention syntax. No change to this model is required, and existing
+conforming processors remain conforming:
+
+* the construct's information rides as register entries (for example,
+  keys `mention` and `mention-id`) over the nearest existing construct,
+  so documents remain losslessly interchangeable the day the flavour
+  ships;
+* a specialization module may later give the construct type semantics
+  (a subclass under `BasicElement`), for processors that want them;
+* neither path touches the base model, and both are visible to
+  profiles through their register-key vocabulary.

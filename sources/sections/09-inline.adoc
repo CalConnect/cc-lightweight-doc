@@ -44,6 +44,13 @@ languages, and correspond to the HTML 5 `ruby`, `rt`, `rp` elements:
 * _RubyPronunciation_ (`rt`)
 * _RubyAnnotation_ (`rp`)
 
+All strings are Unicode text. Directionality and line-breaking rules
+are rendering concerns, relegated to stylesheets and rendering
+processors; where an author must assert text direction explicitly, the
+`dir` attribute register key carries the assertion. Unicode
+normalization is a serialization concern and is not constrained by
+this model.
+
 Text elements are distinguished from _Pure Text Elements_, which are
 restricted to contain only other pure text elements — no identifiers and no
 references — so that consumers that process plain runs of text can rely on

@@ -7,7 +7,6 @@ The _BasicDocument_ model expresses the structure of generic documents in a ligh
 
 It is deliberately not designed to fully represent semantics of document formats like DocBook and TEI: the model is intended to be a base document model which other document models can map to or specialize upon, or for the interchange of generic document content.
 
-// For example, the Metanorma document model takes the Basic Document model as its starting point.
 
 === Specialization
 
@@ -61,7 +60,11 @@ inline element) carries a set of key-value _Attribute_ entries, optionally
 qualified by a scheme. Markup languages bind their own attribute types as
 register entries; this model deliberately does not enumerate them. Keys with
 established cross-format meaning include `id`, `class`, `lang`, `script`,
-`unnumbered`, `subsequence`, and `format`.
+`unnumbered`, `subsequence`, and `format`. The set of well-known keys
+is maintained as a public registry by the registration authority;
+additional keys are registered according to its registration procedure.
+A profile may close the permitted vocabulary of register keys (see
+_Tailoring and extension_).
 
 === Composition
 

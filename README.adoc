@@ -8,6 +8,19 @@ This document is available in its rendered forms here:
 
 * https://calconnect.github.io/csd-lightweight-doc/[CC/ISO: Lightweight document -- Document metamodel (HTML)]
 
+== Publication sequence
+
+This document is published in two flavours from the same sources:
+
+1. *CC 36010* — the CalConnect standard, published by CalConnect
+   (this repository, `sources/cc-36010.adoc`).
+2. *ISO 36010* — the fast-track Draft International Standard copy for
+   ISO/TC 154 (`sources/iso-36010.adoc`), submitted after CalConnect
+   publication, per the ISO fast-track procedure.
+
+Both flavours compile from the shared section sources; flavour-specific
+content is limited to the foreword and document attributes.
+
 == Fetching the document
 
 [source,sh]

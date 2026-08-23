@@ -1,10 +1,12 @@
 [[conformance]]
 == Conformance
 
-The LutaML definition modules (`models/**/*.lml` in the model repository)
-are the definitive expression of this document model. The RelaxNG Compact
-grammars accompanying them are implementation grammars for validation;
-the diagrams reproduced in this document are informative.
+The definition modules of the model repository are the definitive
+expression of this document model. The RelaxNG Compact grammar
+accompanying them, conforming to <<iso19757-2>>, is the normative
+machine-readable expression for serialization: validation of a
+serialized document against the model is performed against that
+grammar. The diagrams reproduced in this document are informative.
 
 A serialization or implementation conforms to this model if it can
 represent every construct of the model without loss. This model is

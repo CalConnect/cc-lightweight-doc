@@ -40,7 +40,9 @@ In addition to the Basic Data Values, the _BasicDocument_ model defines a contai
 The _IntegrityValue_ class consists of a `hash` value and a `signature`,
 with an associated `publicKey`; hash algorithm identifiers follow
 <<iso10118>> and digital signature algorithm identifiers follow
-<<iso14888>>.
+<<iso14888>>. This document does not specify security mechanisms,
+protocols, or verification procedures: integrity values carry
+evidence whose semantics are defined by the referenced standards.
 
 .Basic Document model: Contribution Element Metadata
 image::basicdoc-models/images/ContribMetadata.png[]

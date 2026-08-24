@@ -2,11 +2,24 @@
 == Conformance
 
 The definition modules of the model repository are the definitive
-expression of this document model. The RelaxNG Compact grammar
-accompanying them, conforming to <<iso19757-2>>, is the normative
-machine-readable expression for serialization: validation of a
-serialized document against the model is performed against that
-grammar. The diagrams reproduced in this document are informative.
+expression of this document model.
+
+The model is independent of serialization. It may be implemented in
+one, many, or multiple serialization formats — XML, YAML, or any
+format capable of representing the model's constructs — and a
+document can be transformed from one serialization format to another
+with no loss. This lossless transformability is a defining property
+of the model-driven architecture of this document: the model, not any
+of its serializations, is what conforming implementations share.
+
+_Reference serializations_ accompany the model, each a complete and
+machine-checkable realization of it: an XML serialization whose
+schema is a RelaxNG Compact grammar conforming to <<iso19757-2>>, and
+a YAML serialization defined by the instance conventions of the model
+repository (see <<annex-d>>). They do not constrain the choice of
+format; they demonstrate that the model is fully implementable, and
+serve as equivalence targets for testing other serializations. The
+diagrams reproduced in this document are informative.
 
 A serialization or implementation conforms to this model if it can
 represent every construct of the model without loss. This model is

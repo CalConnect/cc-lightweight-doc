@@ -17,8 +17,9 @@ instance documents it consumes are maintained alongside the model.
 
 | Model integrity | The LML definition modules parse, names resolve, every attribute carries an explicit visibility marker and a definition | Model lint gate
 | Diagram parity | Every diagram view includes its models and declares associations within its include closure; no class bodies under views | Parity gate
-| XML serialization | Every construct has a serializable XML form accepted by the accompanying grammar | XML instance suite against the compiled grammar
-| YAML serialization | Every construct has a serializable YAML form conforming to the model, inheritance included | YAML instance suite against the parsed model
+| XML reference serialization | Every construct has a serializable XML form accepted by the accompanying grammar | XML instance suite against the compiled grammar
+| YAML reference serialization | Every construct has a serializable YAML form conforming to the model, inheritance included | YAML instance suite against the parsed model
+| Any serialization | A serialization format represents every construct without loss and round-trips to a reference serialization | Instance-equivalence check against a reference serialization
 | Profile conformance | A profile narrows only: names exist, cardinalities never widen, enumerations are subsets; profile instances contain no excluded construct and use permitted register keys only | Profile suite against the model and worked instances
 |===
 
@@ -38,6 +39,11 @@ instance in the suite is treated as unfinished.
 === Verdicts
 
 A processor or serialization passes a test if the instance validates
-against the grammar (XML) or the parsed model (YAML) without error.
+against its schema or parsed model without error; a serialization in
+any other format passes if its instances are equivalent, construct
+for construct, to a valid reference-serialization instance. The twin
+reference instances — one per reference serialization, carrying
+identical content — demonstrate lossless transformability between
+serialization formats.
 The gates abort on first failure; the test suite is regenerated from
 the model sources on every change.

@@ -14,5 +14,6 @@ jobs:
     uses: actions-mn/.github/.github/workflows/metanorma-release.yml@main
     with:
       default-visibility: private
+      submodules: recursive
     secrets: inherit
 

@@ -163,7 +163,7 @@ text(s, 1.2, 5.64, 10.9, 0.95,
 pageno(s, 8)
 
 # ---- 9 · Specialize/extend ----
-s = slide(); band(s); eyebrow(s, "SPECIALIZE AND EXTEND — ANNEXES B AND C")
+s = slide(); band(s); eyebrow(s, "ADOPTION — SPECIALIZE / EXTEND / TAILOR")
 headline(s, "Adopt it three ways — none touch the base")
 text(s, 0.55, 1.95, 3.85, 0.4, "SPECIALIZE — add", size=15, bold=True, color=CYAN, mono=True)
 text(s, 0.55, 2.42, 3.85, 3.6,

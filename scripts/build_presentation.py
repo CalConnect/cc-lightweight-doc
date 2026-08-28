@@ -164,16 +164,20 @@ pageno(s, 8)
 
 # ---- 9 · Specialize/extend ----
 s = slide(); band(s); eyebrow(s, "SPECIALIZE AND EXTEND — ANNEXES B AND C")
-headline(s, "Dialects arrive without ever forking the model")
-text(s, 0.9, 1.95, 5.5, 0.4, "SPECIALIZE", size=16, bold=True, color=CYAN, mono=True)
-text(s, 0.9, 2.42, 5.5, 3.4,
-     "· Type values, not parallel classes —\n  admonition kinds, list numeration,\n  stem languages, document classes\n· Attribute overrides: add, remove,\n  retighten (e.g. no hanging paragraphs)\n· Subclassing under the construct roots\n· Constraint specialization:\n  PureTextElement recursion guarantees",
-     size=13.5, color=SLATE)
-text(s, 7.0, 1.95, 5.4, 0.4, "EXTEND", size=16, bold=True, color=COPPER, mono=True)
-text(s, 7.0, 2.42, 5.4, 3.5,
-     "· Attribute register: open key-value\n  entries on any construct — dialect\n  keys (checkbox, option), no model change\n· Raw stays lossless: FormattedString,\n  format-qualified blocks\n· Unknown directives (all of Sphinx)\n  decompose into register + relaxed content\n· A document is a block: whole documents\n  compose as child content",
-     size=13.5, color=SLATE)
-kicker(s, "Open-closed by construction: the basis is defined once and never modified — only specialized upon.", y=6.25)
+headline(s, "Adopt it three ways — none touch the base")
+text(s, 0.55, 1.95, 3.85, 0.4, "SPECIALIZE — add", size=15, bold=True, color=CYAN, mono=True)
+text(s, 0.55, 2.42, 3.85, 3.6,
+     "· Type values, not parallel classes\n· Attribute overrides: add,\n  remove, retighten\n· Subclasses under the\n  construct roots\n\nAnnex B",
+     size=12.5, color=SLATE)
+text(s, 4.72, 1.95, 3.85, 0.4, "EXTEND — carry", size=15, bold=True, color=COPPER, mono=True)
+text(s, 4.72, 2.42, 3.85, 3.6,
+     "· Attribute register: dialect\n  keys on any construct,\n  zero model change\n· Raw, variables, unknown\n  directives — all lossless\n\nAnnex C",
+     size=12.5, color=SLATE)
+text(s, 8.9, 1.95, 3.9, 0.4, "TAILOR — subtract", size=15, bold=True, color=RGBColor(0x2D, 0x6A, 0x4F), mono=True)
+text(s, 8.9, 2.42, 3.9, 3.6,
+     "· Profiles: ~20 lines of YAML\n  declare your subset\n· Narrowing only — the machine\n  rejects any widening\n· A profile document is always\n  a valid base document\n\nClause 4 + registry",
+     size=12.5, color=SLATE)
+kicker(s, "Open-closed by construction: the basis is never modified — only specialized, extended, or profiled.", y=6.25)
 pageno(s, 9)
 
 # ---- 10 · Conformance you can run (D6) ----

@@ -1,12 +1,12 @@
 = Lightweight document -- Document metamodel
 :docnumber: 36010
-:copyright-year: 2019
+:copyright-year: 2026
 :language: en
 :doctype: standard
 :edition: 1
-:status: working-draft
-:revdate: 2019-06-05
-:published-date: 2019-06-05
+:status: published
+:revdate: 2026-08-31
+:published-date: 2026-08-31
 :script: Latn
 :technical-committee: VCARD
 :fullname: Ronald Tse
@@ -18,7 +18,6 @@
 :fullname_3: Nick Nicholas
 :surname_3: Nicholas
 :givenname_3: Nick
-:draft:
 :toc:
 :stem:
 :xrefstyle: short

@@ -10,8 +10,8 @@
 :title-intro-fr: Document léger
 :title-main-fr: Métamodèle des documents
 :doctype: international-standard
-:docstage: 10
-:docsubstage: 92
+:docstage: 40
+:docsubstage: 00
 :technical-committee-type: TC
 :technical-committee-number: 154
 :technical-committee: Processes, data elements and documents in commerce, industry and administration
@@ -19,7 +19,6 @@
 :workgroup-number: 4
 :workgroup: e-Documents
 :secretariat: SAC
-:draft:
 :toc:
 :stem:
 :xrefstyle: short

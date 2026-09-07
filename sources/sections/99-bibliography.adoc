@@ -7,6 +7,10 @@
 
 * [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
 
+* [[[iso6523,ISO 6523]]], _Information technology -- Structure of the identification of organizations and organization parts_
+
+* [[[iso9735,ISO 9735]]], _Electronic data interchange for administration, commerce and transport (EDIFACT) -- Application level syntax rules_
+
 * [[[iso5127,ISO 5127:2017]]], _Information and documentation — Foundation and vocabulary_
 
 * [[[IEV,IEC 60050]]], _International Electrotechnical Vocabulary (IEV Electropedia)_

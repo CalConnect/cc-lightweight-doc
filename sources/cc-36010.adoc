@@ -3,10 +3,10 @@
 :copyright-year: 2026
 :language: en
 :doctype: standard
-:edition: 1
+:edition: 1.1
 :status: published
-:revdate: 2026-08-31
-:published-date: 2026-08-31
+:revdate: 2026-09-07
+:published-date: 2026-09-07
 :script: Latn
 :technical-committee: VCARD
 :fullname: Ronald Tse
@@ -62,6 +62,8 @@ include::sections/ab-specialization.adoc[]
 include::sections/ac-extensions.adoc[]
 
 include::sections/ad-abstract-test-suite.adoc[]
+
+include::sections/ae-business-interchange.adoc[]
 
 include::sections/99-bibliography.adoc[]
 

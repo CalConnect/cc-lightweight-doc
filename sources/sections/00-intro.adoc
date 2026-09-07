@@ -37,6 +37,17 @@ _BasicDocument_ achieves a number of goals:
   formats (and syntaxes) with multiple output formats; and
 * Enables changes to be applied incrementally in a defined manner.
 
+Business documents exchanged between organizations — orders, invoices,
+contracts, tenders, specifications — combine such structured data with
+rich text. Standards exist for the data elements of commerce, for time
+(ISO 8601) and for organization identification (ISO 6523); the
+document layer that carries the remaining rich text — terms, notes,
+line-item tables, and the revisions exchanged between the parties —
+has no common model, and degrades to unstructured text on every hop
+between systems. _BasicDocument_ is intended to serve as that carrier
+layer as well; Annex E illustrates its application to business
+document interchange without adding any construct to the model.
+
 _BasicDocument_ is deliberately not a detailed document model,
 unlike DocBook and TEI: it is intended to be a base document model
 which other document models can map to or specialize upon.

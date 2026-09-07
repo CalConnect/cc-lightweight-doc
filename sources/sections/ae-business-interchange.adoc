@@ -1,0 +1,72 @@
+[[annex-e]]
+[appendix,obligation=informative]
+== Application to business document interchange
+
+=== General
+
+Business documents exchanged between organizations — purchase orders,
+invoices, contracts, tender responses, technical data packages —
+combine structured data with rich text: identifiers, amounts and dates
+alongside terms, notes, line-item tables, and the revisions the
+parties exchange while negotiating or fulfilling them. Standards exist
+for the structured data elements of commerce, for time (ISO 8601) and
+for organization identification (ISO 6523); the document that carries
+the remainder has no common model, and its rich text degrades to
+unstructured text on every hop between systems.
+
+This annex illustrates, without normative effect, how the reference
+model serves as the carrier layer for such documents. Nothing in this
+annex adds a construct to the model: everything shown is ordinary
+_BasicDocument_ content, register entries and changes. The complete
+worked instance is maintained alongside the model as a validated
+reference instance.
+
+=== A worked commercial document
+
+A purchase order expressed in the reference model maps as follows:
+
+[cols="30%,70%",options="header"]
+|===
+| Model capability | Use in the worked instance
+
+| Document register | Document class (`purchase-order`) and currency carried as register entries on the document
+| Register scheme keys | Party identifiers carried as register entries qualified by the `iso-6523` scheme
+| Sections | Clause text: header, terms, line items
+| Table blocks | Line items: item, quantity, unit price
+| Computed content (Clause 11) | Total cells carried as formula blocks; a merged totals row in the table footer
+| Admonitions | A tolerance note attached where it applies
+| Variable references | Recurring identifiers (`po-number`, `issue-date`, `incoterm`) bound by the receiving system
+| Bibliographic data | Document identifier and classification
+|===
+
+The instance is a base document: a system that has never heard of
+purchase orders can still read, transform and render it, because every
+trade-specific binding rides the register and the open content model
+rather than new constructs.
+
+=== Revision rounds
+
+The change models of <<change-models>> carry the revisions the parties
+exchange against such a document: a line item is added (row insert), a
+priced column is appended (column insert), totals become computed
+cells (cell update), a negotiated row moves to the footer (row move),
+and the resulting operations are exchanged as a change set whose
+parent ordering records the causal sequence of the negotiation. The
+twin change-set instance maintained alongside the model exercises
+every operation of Clause 11 against a line-item table, including a
+computed cell.
+
+Ordering and concurrent changes (see <<ordering>>) state the boundary
+that matters for interchange between organizations: the operations and
+their causal ordering are exchanged losslessly by this document; how
+concurrent revisions from two parties are aligned onto a common state
+is the concern of the collaboration algorithm each deployment chooses.
+
+=== Community tailoring
+
+A trading community can declare a profile over the same document (see
+Clause 4, Tailoring and extension): a closed register-key vocabulary
+(trade keys only), narrowed constructs, and its own governance —
+without any change to this document or to the base model. A profile
+document remains a valid base document, so counterparties that have
+not adopted the profile can still interchange it.

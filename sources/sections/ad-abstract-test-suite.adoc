@@ -21,6 +21,7 @@ instance documents it consumes are maintained alongside the model.
 | YAML reference serialization | Every construct has a serializable YAML form conforming to the model, inheritance included | YAML instance suite against the parsed model
 | Any serialization | A serialization format represents every construct without loss and round-trips to a reference serialization | Instance-equivalence check against a reference serialization
 | Profile conformance | A profile narrows only: names exist, cardinalities never widen, enumerations are subsets; profile instances contain no excluded construct and use permitted register keys only | Profile suite against the model and worked instances
+| Change operations | Every change operation has a serializable form, and the operation set addresses every construct shape (string content, key-value slot, ordered sequence, table grid) | Change twin instance suite against the compiled grammar and the parsed model
 |===
 
 === Test material
@@ -33,7 +34,12 @@ table cells, examples), multi-row table headers, variable references,
 citations with a references section and bibliographic item, ruby
 annotations, source code callouts and annotations, reviewer comments,
 anchors and cross-references, and amend composition of blocks,
-sections, and entire documents. A construct without a serializable
+sections, and entire documents, and a business document instance
+(bibliographic data, trade register entries with scheme keys, line-item
+tables, computed cells). A twin change set exercises every change
+operation — node insert with explicit position, node delete and move,
+content and attribute modification, and the full family of table
+changes, including a computed cell. A construct without a serializable
 instance in the suite is treated as unfinished.
 
 === Verdicts

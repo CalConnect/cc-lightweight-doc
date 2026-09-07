@@ -11,6 +11,10 @@ interchangeable document content, or adopted, superseded or internalized
 by document representation models and formats in order
 to represent document content in other forms.
 
+The application of the reference model to particular classes of
+documents, such as business documents exchanged in commerce, is
+illustrated in Annex E.
+
 The modelling of bibliographies and citations is part of the reference model,
 but is the subject of a separate document, <<relaton>>,
 and are hence not described in detail in this document.

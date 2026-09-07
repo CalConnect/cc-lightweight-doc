@@ -10,6 +10,38 @@ applied incrementally towards a _BasicDocument_ in a defined manner.
 .Basic Document model: Changes
 image::basicdoc-models/images/Changes.png[]
 
+The change models are distinct from in-document change markup
+(<<amend>>): a change set carries operational changes to be applied
+to a document, while amend markup records, inside a document, changes
+that have been applied to an earlier version of it. An applied change
+may additionally be recorded as amend markup.
+
+
+=== Addressing model
+
+Changes locate their target and express their effect using three
+addressing modes:
+
+* *identifier reference*: the `target` attribute of the _Change_ model
+identifies an element of the document by the well-known `id` register
+key (see Clause 4). Elements that are the target of changes SHOULD
+carry an `id` register entry, so that they remain addressable across
+revisions.
+
+* *ordinal position*: a _NodePosition_ locates a point in a child
+sequence as a container node and a zero-based ordinal; table changes
+locate rows, columns and cells in the grid of the table (see
+<<table-changes>>).
+
+* *text cursor range*: a _ContentChangeAction_ locates a textual edit
+by the zero-based character positions `from` and `to` within the
+textual content of an element or of a register entry.
+
+Repeated values — the `value` set of a register entry, or repeated
+attributes such as language tags — are addressed as an ordered
+sequence: values are inserted or removed by ordinal or by cursor
+range, in the same way as ordered children.
+
 
 === Change
 
@@ -120,14 +152,25 @@ The `target` attribute inherited from the _Change_ model indicates
 the node this _NodeChange_ action applies to.
 
 
+==== Node position
+
+The _NodePosition_ model locates an insertion point in the document
+tree: a container node and a zero-based ordinal among its children.
+
+It has the following attributes:
+
+`parent`:: A _ReferenceToIdElement_ that indicates the node whose child sequence the position refers to.
+`index`:: A zero-based ordinal among the children of the parent node. When omitted, the position refers to the end of the child sequence.
+
 ==== Node insert
 
 The _NodeInsert_ class specifies the insertion
 of a data node in a _BasicDocument_.
 
-It has the following attribute:
+It has the following attributes:
 
 `content`:: A data element conforming to _BasicElement_ to be inserted into the specified _BasicDocument_.
+`position`:: A _NodePosition_ that indicates where the content is to be inserted. When omitted, the content is appended to the end of the child sequence of the target node.
 
 
 ==== Node delete
@@ -151,6 +194,206 @@ It has the following attributes:
   it is useful for verifying that the location has not changed.
 
 `positionNew`:: A `ReferenceToIdElement` that indicates the new parent or sibling of the node.
+
+
+[[table-changes]]
+=== Table changes
+
+==== General
+
+The _TableChange_ model defines possible actions that modify the
+structure or the content of a table: insertion, deletion and
+reordering of rows and columns, and changes to individual cells,
+including merging and splitting. The `target` attribute inherited from
+the _Change_ model indicates the _TableBlock_ that the action applies
+to.
+
+.Basic Document model: Table changes
+image::basicdoc-models/images/TableChanges.png[]
+
+Row and column ordinals index the *grid* of the table, not the
+sequence of cells in a row: a cell that spans multiple slots through
+`colspan` or `rowspan` occupies all of the covered slots, and grid
+coordinates refer to the origin slot of a cell. Row operations address
+one of the row containers (`head`, `body` or `foot`) and the ordinal
+within that container; cell operations address grid coordinates across
+the whole table.
+
+==== Table area
+
+The _TableArea_ enumeration identifies the row container of a table
+that a row-level change applies to.
+
+`head`:: The table header rows.
+`body`:: The table body rows.
+`foot`:: The table footer rows.
+
+==== Cell coordinate
+
+The _CellCoordinate_ model locates a cell in the grid of a table by
+the grid row and grid column of its origin slot. Indexes are
+zero-based.
+
+It has the following attributes:
+
+`row`:: Zero-based index of the grid row of the cell's origin slot.
+`column`:: Zero-based index of the grid column of the cell's origin slot.
+
+==== Row insert
+
+The _RowInsert_ model specifies the insertion of a row into a table.
+Rows at or after the insertion position shift down by one position
+within the same row container.
+
+It has the following attributes:
+
+`area`:: A _TableArea_ value indicating the row container that the row is inserted into.
+`position`:: Zero-based ordinal within the row container. Rows at or after this position shift down by one.
+`row`:: A _TextTableRow_ to be inserted. When omitted, an empty row sized to the grid of the table is inserted.
+
+==== Row delete
+
+The _RowDelete_ model specifies the deletion of a row from a table.
+Rows after the deleted position shift up by one within the same row
+container.
+
+It has the following attributes:
+
+`area`:: A _TableArea_ value indicating the row container that the row is deleted from.
+`position`:: Zero-based ordinal of the row within the row container.
+
+==== Row move
+
+The _RowMove_ model specifies moving a row of a table to another
+position, possibly into another row container. Other rows shift
+accordingly in both the old and the new container.
+
+It has the following attributes:
+
+`areaOld`:: The row container that the row is moved from.
+`positionOld`:: Zero-based ordinal of the row within its old container. Useful for verifying that the location has not changed.
+`areaNew`:: The row container that the row is moved to.
+`positionNew`:: Zero-based ordinal of the row within its new container.
+
+==== Column insert
+
+The _ColumnInsert_ model specifies the insertion of a column into a
+table. Occupied grid slots at or after the insertion column shift
+right by one in every row; each row that has a slot at the insertion
+column gains a cell there.
+
+It has the following attributes:
+
+`position`:: Zero-based index of the grid column to insert the column at.
+`cell`:: A _TableCell_ template used as the initial content of the cells created in the new column. When omitted, empty text cells are created.
+
+==== Column delete
+
+The _ColumnDelete_ model specifies the deletion of a column from a
+table. Cells that originate in the deleted grid column are removed;
+cells that span it have their column span decremented by one. Occupied
+slots after the deleted column shift left by one in every row.
+
+It has the following attributes:
+
+`position`:: Zero-based index of the grid column to be deleted.
+
+==== Column move
+
+The _ColumnMove_ model specifies moving a column of a table to another
+grid position. Cells move with their column; the affected cells of
+other columns shift accordingly.
+
+It has the following attributes:
+
+`positionOld`:: Zero-based index of the grid column to be moved. Useful for verifying that the location has not changed.
+`positionNew`:: Zero-based grid column index the column is moved to.
+
+==== Cell update
+
+The _CellUpdate_ model specifies the replacement of a single cell of a
+table, identified by the grid coordinates of its origin slot. The
+replacement cell replaces the existing cell wholly: its specialization,
+content and properties.
+
+It has the following attributes:
+
+`row`:: Zero-based index of the grid row of the cell's origin slot.
+`column`:: Zero-based index of the grid column of the cell's origin slot.
+`cell`:: A _TableCell_ that replaces the existing cell.
+
+==== Cell merge
+
+The _CellMerge_ model specifies merging two adjacent cells of a table:
+the cell at `from` absorbs the grid slots of the cell at `to`. The
+cells shall be adjacent on the same grid row (a horizontal merge,
+increasing the column span) or in the same grid column (a vertical
+merge, increasing the row span). The content of both cells is
+concatenated, in document order, into the merged cell.
+
+It has the following attributes:
+
+`from`:: A _CellCoordinate_ for the cell that absorbs the slots of the other cell.
+`to`:: A _CellCoordinate_ for the cell whose slots are absorbed; it ceases to exist.
+
+==== Cell split
+
+The _CellSplit_ model specifies splitting a cell of a table that
+spans multiple grid slots. The cell's span is reduced to the given
+extents; the freed slots are filled with empty text cells, and the
+original cell keeps its content in its origin slot.
+
+It has the following attributes:
+
+`at`:: A _CellCoordinate_ for the cell to be split, by the grid coordinates of its origin slot.
+`rows`:: The resulting row span of the cell. When omitted, the span becomes one.
+`columns`:: The resulting column span of the cell. When omitted, the span becomes one.
+
+
+[[computed-content]]
+=== Computed content
+
+Because the content model of a table cell is relaxed (see
+<<basictable>>), a cell may hold any block, including a _FormulaBlock_:
+a cell whose value is computed rather than literal. The formula
+notation is carried by the `stemType` of the _StemElement_ model;
+formula languages beyond the stem notations, including spreadsheet-style
+expressions that reference other cells, are bound as register entries
+on the formula block, qualified by the `scheme` key of the _Attribute_
+model.
+
+The model carries the expression itself. The evaluation of expressions,
+the resolution of cell references, and the recomputation of computed
+content when referenced content changes are outside the scope of this
+document.
+
+
+[[ordering]]
+=== Ordering and concurrent changes
+
+Changes are operation records: a _ChangeSet_ is applied to the document
+identified by its `documentIdentifier`, and each _Change_ records
+exactly one operation. Ordering between changes is carried by the
+`parentIdentifier` attribute: a change follows the changes it names,
+and a change with no parent is the root of a change sequence. The
+resulting directed acyclic graph is the causal order in which the
+operations of a change set are to be applied.
+
+How concurrent changes transform against each other — operational
+transformation, conflict-free replicated data types, or any other
+merging strategy — is outside the scope of this document, in the same
+way that the choice of serialization format is (see <<conformance>>):
+this document standardizes the operations and their ordering, not the
+algorithms that merge them.
+
+[example]
+====
+Two parties may each issue a change set against the same table, one
+inserting a column and the other updating a cell. The operations and
+their parent ordering are exchanged losslessly by these models;
+aligning the two revisions onto a common state is the concern of the
+collaboration algorithm, not of the interchange format.
+====
 
 
 

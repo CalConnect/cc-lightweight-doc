@@ -64,5 +64,7 @@ include::sections/ac-extensions.adoc[]
 
 include::sections/ad-abstract-test-suite.adoc[]
 
+include::sections/ae-business-interchange.adoc[]
+
 include::sections/99-bibliography.adoc[]
 

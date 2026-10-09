@@ -29,6 +29,12 @@
 
 include::sections-cc/00-foreword.adoc[]
 
+[abstract]
+== Abstract
+
+This document provides a reference lightweight document model called BasicDocument for generic documents, intended as an interoperable basis that allows systems to interchange generic document content while preserving semantics. The model can be directly utilized to represent interchangeable document content, or adopted, superseded or internalized by other document representation models and formats.
+
+
 include::sections/00-intro.adoc[]
 
 include::sections/01-scope.adoc[]

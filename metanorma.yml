@@ -3,6 +3,7 @@ metanorma:
   source:
     files:
     - sources/cc-36010.adoc
+    - sources/cc-36010-2026-ed1.adoc
     - sources/cc-wd-36010.adoc
     - sources/iso-36010.adoc
   collection:

@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths: ['sources/**', 'metanorma.yml', 'metanorma.release.yml']
   workflow_dispatch:
+    inputs:
+      force-replace:
+        description: 'Comma-separated doc IDs or glob patterns to force-replace published releases'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -13,6 +18,7 @@ jobs:
   release:
     uses: actions-mn/.github/.github/workflows/metanorma-release.yml@main
     with:
+      force-replace: ${{ github.event.inputs.force-replace || '' }}
       default-visibility: private
       submodules: true
     secrets: inherit

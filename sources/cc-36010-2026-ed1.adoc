@@ -1,0 +1,73 @@
+= Lightweight document -- Document metamodel
+:docnumber: 36010
+:copyright-year: 2026
+:language: en
+:doctype: standard
+:edition: 1
+:status: published
+:revdate: 2026-08-31
+:published-date: 2026-08-31
+:script: Latn
+:technical-committee: VCARD
+:fullname: Ronald Tse
+:surname: Tse
+:givenname: Ronald
+:fullname_2: Jeffrey Lau
+:surname_2: Lau
+:givenname_2: Jeffrey
+:fullname_3: Nick Nicholas
+:surname_3: Nicholas
+:givenname_3: Nick
+:toc:
+:stem:
+:xrefstyle: short
+:docfile: cc-36010.adoc
+:mn-document-class: csd
+:mn-output-extensions: xml,html,pdf,rxl
+:local-cache-only:
+:data-uri-image:
+
+include::sections-cc/00-foreword.adoc[]
+
+[abstract]
+== Abstract
+
+This document provides a reference lightweight document model called BasicDocument for generic documents, intended as an interoperable basis that allows systems to interchange generic document content while preserving semantics.
+
+
+include::sections/00-intro.adoc[]
+
+include::sections/01-scope.adoc[]
+
+include::sections/02-norm-refs.adoc[]
+
+include::sections/01a-conformance.adoc[]
+
+include::sections/03-terms.adoc[]
+
+include::sections/04-modelling.adoc[]
+
+include::sections/05-basicdoc.adoc[]
+
+include::sections/06-metadata.adoc[]
+
+include::sections/07-sections.adoc[]
+
+include::sections/08-blocks.adoc[]
+
+include::sections/09-inline.adoc[]
+
+include::sections/10-data-types.adoc[]
+
+include::sections/11-changes.adoc[]
+
+include::sections/aa-markup-mapping.adoc[]
+
+include::sections/ab-specialization.adoc[]
+
+include::sections/ac-extensions.adoc[]
+
+include::sections/ad-abstract-test-suite.adoc[]
+
+include::sections/99-bibliography.adoc[]
+
